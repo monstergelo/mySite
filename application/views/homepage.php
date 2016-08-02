@@ -25,18 +25,7 @@ Released   : 20140310
 </head>
 <body>
 <div id="wrapper">
-	<div id="menu-wrapper">
-		<div id="menu" class="container">
-			<ul>
-				<li class="current_page_item"><a href="<?php echo base_url(); ?>/index.php">Homepage</a></li>
-				<li><a href="<?php echo base_url(); ?>/index.php/about">About</a></li>
-				<li><a href="<?php echo base_url(); ?>/index.php/posts">Blog</a></li>
-				<li><a href="<?php echo base_url(); ?>/index.php/portfolios">Portfolio</a></li>
-				<li><a href="<?php echo base_url(); ?>/index.php/contacts">Contact</a></li>
-			</ul>
-		</div>
-		<!-- end #menu --> 
-	</div>
+	<?php include 'header.php' ?>
 	<br />
 	<br />
 	<div id="page" class="container">
