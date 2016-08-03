@@ -9,6 +9,13 @@ class Post extends CI_Model
 		return $query->result_array();
 	}
 
+	function all_posts($count=10, $start=0)
+	{
+		$this->db->select()->from('post')->limit($count,$start)->order_by('Date_Added', 'desc');
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
 	function get_single_post($post_id)
 	{
 		$this->db->select()->from('post')->where(array('active'=>1,'PostID'=>$post_id))->order_by('Date_Added', 'desc');
@@ -39,5 +46,21 @@ class Post extends CI_Model
 	{
 		$this->db->insert('post', $data);
 		return $this->db->insert_id();
+	}
+
+	function toggle_post($post_id)
+	{
+		$this->db->select()->from('post')->where('PostID', $post_id);
+		$data = $this->db->get()->first_row('array');
+		if($data['Active'] == 1)
+		{
+			$data['Active'] = 0;
+		}
+		else //if($data['Active'] == 0)
+		{
+			$data['Active'] = 1;
+		}
+		$this->db->select()->from('post')->where('PostID', $post_id);
+		$this->db->update('post', $data);
 	}
 }
