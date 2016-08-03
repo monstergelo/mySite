@@ -20,7 +20,7 @@ class Post_Overviews extends CI_Controller
 
 	function edit($post_id)
 	{
-		redirect('new_posts');
+		redirect('edit_posts/index/'.$post_id);
 	}
 
 	function delete($post_id)

@@ -28,13 +28,13 @@ Released   : 20140310
 <?php include 'header.php' ?>
 <div id='page' class="container"> 
 	<div class="forms">
-		<form class="newStuff" action="new_posts/submit">
+		<form class="newStuff" action="../../edit_posts/submit/<?php echo $post['PostID'] ?>">
 			<div class="row">
 				<div class="col-md-4">
 					<label>title:</label>
 				</div> 
 				<div class="col-md-8">
-					<input type="text" name="tobe_title">
+					<input type="text" name="tobe_title" value="<?php echo $post['Title']?>" ></input>
 				</div> 
 			</div>
 			<div class="row">
@@ -42,7 +42,7 @@ Released   : 20140310
 					<label>content:</label>
 				</div> 
 				<div class="col-md-8">
-					<textarea name="tobe_content" id="tbc" cols="30" rows="10"></textarea>
+					<textarea name="tobe_content" id="tbc" cols="30" rows="10"><?php echo $post['Content']?></textarea>
 				</div>
 			</div>
 			<button>

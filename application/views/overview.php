@@ -56,8 +56,8 @@ Released   : 20140310
 			{
 		?>		<table>
 					<tr >
-						<td ><?php echo $row['Title']?></td>
-						<td ><div class="options"><a href="<?php echo base_url(); ?>/index.php/post_overviews/edit">edit</a></div></td>
+						<td ><a href="<?php echo base_url(); ?>/index.php/single_posts/index/<?php echo $row['PostID']?>"><?php echo $row['Title']?></a></td>
+						<td ><div class="options"><a href="<?php echo base_url(); ?>/index.php/post_overviews/edit/<?php echo $row['PostID']?>">edit</a></div></td>
 						<td ><div class="options"><a href="<?php echo base_url(); ?>/index.php/post_overviews/delete/<?php echo $row['PostID']?>">delete</a></div></td>
 						<td ><div class="options"><a href="<?php echo base_url(); ?>/index.php/post_overviews/toggle/<?php echo $row['PostID']?>">
 							<?php if($row['Active'] == 1){?>		deactivate
