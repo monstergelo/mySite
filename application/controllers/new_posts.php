@@ -15,6 +15,7 @@ class New_Posts extends CI_Controller
         );
 		$this->load->model('post');
 		$this->post->add_post($data);
-		$this->load->view('blog.php');
+		
+		redirect('posts');
 	}
 }

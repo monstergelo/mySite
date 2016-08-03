@@ -58,7 +58,16 @@ Released   : 20140310
 				<div id="page">
 					<div id="content">
 						<div class="title"><h2><?=$row['Title']?></h2></div>
-						<p><?=$row['Content']?></p>
+						<p>
+							<?=substr($row['Content'],0,200)?>
+							<?php if(mb_strlen($row['Content']) > 200)
+							{?>
+								.... <a href="http://localhost/mySite/index.php/single_posts/index/<?php echo $row['PostID']?>">read more</a>
+							<?php
+							}
+							?>
+						</p>
+
 					</div>
 				</div>
 				<br>

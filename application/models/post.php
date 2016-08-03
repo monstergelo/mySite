@@ -9,9 +9,9 @@ class Post extends CI_Model
 		return $query->result_array();
 	}
 
-	function get_post($post_id)
+	function get_single_post($post_id)
 	{
-		$this->db->select()->from('post')->where(array('active'=>1,'PostID'=>$post_id))->limit($count,$start)->order_by('Date_Added', 'desc');
+		$this->db->select()->from('post')->where(array('active'=>1,'PostID'=>$post_id))->order_by('Date_Added', 'desc');
 		$query=$this->db->get();
 		return $query->first_row('array');
 	}

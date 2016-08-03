@@ -7,7 +7,6 @@
 					<li><a href="<?php echo base_url(); ?>/index.php/posts">Blog</a></li>
 					<li><a href="<?php echo base_url(); ?>/index.php/portfolios">Portfolio</a></li>
 					<li><a href="<?php echo base_url(); ?>/index.php/contacts">Contact</a></li>
-					<li><a href="#tbc">rtrt</a></li>
 				</ul>
 			</div>
 			<!-- end #menu --> 

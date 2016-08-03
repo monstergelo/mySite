@@ -4,7 +4,7 @@ class Posts extends CI_Controller
 {
 	function index($start=0)
 	{
-		$limit = 2;
+		$limit = 5;
 		$this->load->model('post');
 		$this->load->library('pagination');
 		$data['posts']=$this->post->get_posts($limit, $start);
